@@ -3,6 +3,7 @@
 #include "game-result.h"
 
 #include <iostream>
+#include <sstream>
 using namespace std;
 
 
@@ -15,7 +16,10 @@ void Player::init(int id, char symbol, string name) {
 PlayerMove Player::getMove() const {
     PlayerMove pMove;
     cout <<"Player '"<< symbol << "'  move ROW COL: ";
-    cin >> pMove.x >> pMove.y;
+    string str;
+    getline(cin, str);
+    stringstream ss(str);
+    ss >> pMove.x >> pMove.y;
     // board's index starts from 0 hence, adjust for board
     pMove.x--;
     pMove.y--;
