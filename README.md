@@ -1,2 +1,2 @@
-# tictactoe
-Tic Tac Toe Game
+# Tic Tac Toe Game - Design with implementation 
+
